@@ -1,70 +1,27 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+react - try again with Net Ninja: YT - December 2020
+github: https://github.com/iamshaunjp/Complete-React-Tutorial
+* use `create-react-app` to create the initial react app:
+  * /node_modules - all packages including react, etc.
+  * /public - public files (to the browser) `index.html` -> `<div id='root'></div>`
+  * /src - most dev will be here including components - App.js - inside 'return' kind of like JS -> JSX
+    * deleted App.text.js - not covered here
+    * `index.js` - kick starts the app -> `getElementId('root')`
+    * `reportWebVitals.js` - performance reporting - not needed here - deleted - dleted import in index.js also
+    * `setupTest.js` - deleted
+* preview in browser - `npm run start` - starts local server
+* NOTE: `npm install` uses package.json to install all dependencies in node_modules folder
+* Component files start with a capital letter
+* `/src/App.css` - deleted + import in App.js - is inserted into second '<style>' tag. We will use index.css in this tut.
+* state - a component encompasses variables not available to other components unless they are exposed with 'useState'
+* props - a component can receive data even from other components via props. see BlogList.js
+* useEffect - fire a function after each render. this is a good place to fetch data from a db.
+* created 'data' directory to hode JSON file for JSON Server
+* JSON server:
+  * created `data/db.json`
+  * run server -- `npx json-server --watch <jsonfile> --port <portnum>`  -- NOTE: see port in Home.js (fetch) 
+* Created Home1.js - with useEffect with fetch, error checking etc. New Home.js will continue by creating a custom hook (useFetch.js) to take care of the same functionality.
+* React router -- react intercepts requests for pages and delivers the content (component) for that request (url)
+  * install: `npm install react-router-dom@5` -- getting a specific version -> '...@5'
+  * update `src/App.js`
+* deleted /node_modules (188Mb) to save space. Just do `npm install` to reinstall dependencies (package-json)
+* DONE! 02/07/2021 -- Nice tut, I think I now have a good grasp of react basics.
